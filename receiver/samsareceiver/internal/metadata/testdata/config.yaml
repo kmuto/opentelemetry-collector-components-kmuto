@@ -1,0 +1,9 @@
+default:
+all_set:
+  metrics:
+    samsa.battery.remaining:
+      enabled: true
+none_set:
+  metrics:
+    samsa.battery.remaining:
+      enabled: false

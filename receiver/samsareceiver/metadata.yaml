@@ -1,0 +1,22 @@
+type: samsa
+
+status:
+  class: receiver
+  stability:
+    development: [metrics]
+  codeowners:
+    active: [kmuto]
+
+attributes:
+  samsa.device.name:
+    type: string
+    description: Robot name
+
+metrics:
+  samsa.battery.remaining:
+    enabled: true
+    description: Battery remaining percent value
+    unit: "1"
+    gauge:
+      value_type: int
+    attributes: [samsa.device.name]

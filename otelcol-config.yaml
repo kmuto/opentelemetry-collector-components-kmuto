@@ -1,0 +1,20 @@
+receivers:
+  samsa:
+    device_name: Gregor
+    collection_interval: 10s
+
+exporters:
+  debug:
+    verbosity: detailed
+  file:
+    path: /dev/stdout
+    format: json
+
+service:
+  pipelines:
+    metrics:
+      receivers:
+        - samsa
+      exporters:
+        - debug
+        - file
